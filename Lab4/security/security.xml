@@ -1,0 +1,13 @@
+<odoo>
+    <record id="group_sale_order_cancel_control" model="res.groups">
+        <field name="name">Sale Order Cancel Control</field>
+        <field name="category_id" ref="base.module_category_sales_management"/>
+    </record>
+
+    <record id="course_access_rule" model="ir.rule">
+        <field name="name">Course Access Rule</field>
+        <field name="model_id" ref="your_module.model_courses"/>
+        <field name="domain_force">[('course_type', '=', 'lecture')]</field>
+        <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+    </record>
+</odoo>

@@ -1,0 +1,16 @@
+<odoo>
+    <template id="report_saleorder_document_inherit" inherit_id="sale.report_saleorder_document">
+        <xpath expr="//table[@class='table table-condensed']/tbody" position="after">
+            <tr>
+                <td colspan="4">
+                    <strong>Deliveryman:</strong> <span t-field="o.deliveryman.name"/>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4">
+                    <strong>Description:</strong> <span t-field="o.description"/>
+                </td>
+            </tr>
+        </xpath>
+    </template>
+</odoo>
